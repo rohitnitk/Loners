@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etemail" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="LOGIN"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etpassword" />
+
+    <TextView
+        android:id="@+id/tvinfo"
+        android:layout_width="327dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="84dp"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvforgot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
+        android:textColor="@color/colorAccent"
+        />
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="enter email"
+        android:inputType="textPersonName|textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etimage"
+        />
+
+    <ImageView
+        android:id="@+id/etimage"
+        android:layout_width="131dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/satish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvsign"
+        android:layout_width="199dp"
+        android:layout_height="18dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="76dp"
+        android:text="             New user?SIGN IN"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintBottom_toTopOf="@+id/tvinfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
+        app:layout_constraintVertical_bias="0.0"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="openOrg"/>
+
+    <TextView
+        android:id="@+id/tvforgot"
+        android:layout_width="149dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginRight="171dp"
+        android:text="       forgot password?"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
+        app:layout_constraintVertical_bias="0.803" />
+
+    <TextView
+        android:id="@+id/eterror1"
+        android:layout_width="224dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/etpassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etemail"
+        app:layout_constraintVertical_bias="0.0"
+
+        />
+
+    <TextView
+        android:id="@+id/eterror2"
+        android:layout_width="220dp"
+        android:layout_height="22dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/btnlogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etpassword"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>

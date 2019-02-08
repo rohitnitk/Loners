@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CreateEvent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_ground_rohit"
+    tools:context=".createEvent"
+    tools:layout_editor_absoluteY="25dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/createEvent"
+            android:layout_width="200dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="Create Event"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/eventTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Create Event" />
+
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="91dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="81dp"
+            android:gravity="start"
+            android:text="Event Title: "
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toStartOf="@+id/editDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/titleEdit"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="17dp"
+            android:background="@drawable/bg_name_rohit"
+            android:ems="10"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:text=""
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/eventTitle" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="172dp"
+            android:text="Description:"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/textInputLayout6"
+            android:layout_width="0dp"
+            android:layout_height="138dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="46dp"
+            android:background="@drawable/bg_name_rohit"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:textAlignment="viewStart"
+            app:layout_constraintBottom_toBottomOf="@+id/dateView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleEdit">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/dateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="165dp"
+            android:layout_marginBottom="165dp"
+            android:text="Date:"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            tools:text="Date:" />
+
+        <EditText
+            android:id="@+id/editDate"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginBottom="161dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="dd/mm/yyyy"
+            android:inputType="date"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editText4"
+            app:layout_constraintStart_toEndOf="@+id/dateView"
+            app:layout_constraintTop_toTopOf="@+id/textInputLayout6" />
+
+        <TextView
+            android:id="@+id/locationViewView"
+            android:layout_width="89dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="38dp"
+            android:text="Location:"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editDate" />
+
+        <Button
+            android:id="@+id/PostButton"
+            android:layout_width="161dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_style_rohit"
+            android:text="Post"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="92dp"
+            android:layout_marginBottom="91dp"
+            android:text="Country:"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="44dp"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/locationViewView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Pin Code:"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/editText4"
+            app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="140dp"
+            android:gravity="start"
+            android:text="Address:"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/editText4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="133dp"
+            android:layout_marginBottom="133dp"
+            android:ems="10"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editText"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/dateView"
+            app:layout_constraintVertical_bias="1.0" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

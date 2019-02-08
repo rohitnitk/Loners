@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context="com.example.loginpage.chatpage">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/conversation"
+        android:layout_width="match_parent"
+        android:layout_height="592dp"
+        android:layout_above="@+id/userInput"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/userInput"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_edit_text"
+
+        android:hint="type a message"
+        android:inputType="text"
+        android:textColor="#fff"
+        android:padding="12dp"
+        android:imeActionId="4"
+        android:imeOptions="actionSend"
+        android:textColorHint="#fff"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignStart="@+id/backbutton"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        app:srcCompat="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/backbutton"
+        android:layout_width="78dp"
+        android:layout_height="66dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/backbutton"
+        android:text="satish"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/profilebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="669dp"
+        android:layout_toEndOf="@+id/textView"
+        android:background="@drawable/bg_edit_text"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:text="profile" />
+</RelativeLayout>

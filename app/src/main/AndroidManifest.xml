@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.loginpage">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".backbutton"
+            android:label="@string/title_activity_backbutton"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".profile" />
+        <activity android:name=".chatpage" />
+        <activity android:name=".PasswordActivity" />
+        <activity android:name=".userdashboard"
+            android:label="user dashboard"/>
+        <activity android:name=".activity" />
+        <activity android:name=".act" />
+        <activity android:name=".signup">
+        </activity>
+        <activity android:name=".forgotpassword" />
+        <activity android:name=".mainpage" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".verification" />
+        <activity android:name=".userprofile" />
+        <activity android:name=".org_profile" />
+        <activity
+            android:name=".personal"
+            android:label="@string/title_activity_personal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Organizer"
+        android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".sup"/>
+        <activity android:name=".loner"/>
+        <activity android:name=".createEvent"/>
+        <activity android:name=".ReceiveEvent"/>
+        <activity android:name=".OrgProfile"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+    </application>
+
+</manifest>
