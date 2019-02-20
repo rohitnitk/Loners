@@ -85,7 +85,7 @@ public class sup extends AppCompatActivity {
                 RadioButton button = (RadioButton) findViewById(R.id.loner);
 
                 if (button.isChecked()) {
-                    Intent intent = new Intent(sup.this, loner.class);
+                    Intent intent = new Intent(sup.this, userdashboard.class);
                     startActivity(intent);
                     flag = 1;
                 } else {
