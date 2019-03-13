@@ -16,15 +16,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class MainActivity extends AppCompatActivity {
 
 
     private ImageView image;
     private EditText emailinput;
-    private EditText password;
+    private EditText userpassword;
     private TextView info, signin_button, forgot_button, error_username, error_password;
     private Button login;
     private int counter = 5;
+    private FirebaseAuth firebaseAuth;
+    public FirebaseDatabase firebaseDatabase;
+    String is_user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         image = (ImageView) findViewById(R.id.etimage);
         emailinput = (EditText) findViewById(R.id.etemail);
-        password = (EditText) findViewById(R.id.etpassword);
+        userpassword = (EditText) findViewById(R.id.etpassword);
         info = (TextView) findViewById(R.id.tvinfo);
         login = (Button) findViewById(R.id.btnlogin);
         signin_button = (TextView) findViewById(R.id.tvsign);
@@ -43,10 +57,36 @@ public class MainActivity extends AppCompatActivity {
 
         //info.setText("no of attemps remaining:5");
 
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+
+        if(user!=null){
+            finish();
+            firebaseDatabase = FirebaseDatabase.getInstance();
+            DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+
+            databaseReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    UserData userData = dataSnapshot.getValue(UserData.class);
+                    if(userData.getIsuser().compareTo("true")==0)
+                        startActivity(new Intent(MainActivity.this, userdashboard.class));
+                    else
+                        startActivity(new Intent(MainActivity.this, Organizer.class));
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                }
+            });
+        }
+
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate(emailinput.getText().toString(), password.getText().toString());
+                validate(emailinput.getText().toString(), userpassword.getText().toString());
             }
         });
 
@@ -70,60 +110,46 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @SuppressLint("SetTextI18n")
-    private void validate(String emailinput, String userpassword) {
-        boolean a;
-        int b;
-
-        if (emailinput.isEmpty()) {
-            error_username.setText("*field is empty");
+    private void validate(String userName, String userPassword) {
 
 
-        } else if (!Patterns.EMAIL_ADDRESS.matcher(emailinput).matches()) {
-            error_username.setText("*please enter valid email address");
 
+        firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    firebaseDatabase = FirebaseDatabase.getInstance();
+                    DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
 
-        } else {
-            error_username.setText("");
-        }
+                    databaseReference.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            UserData userData = dataSnapshot.getValue(UserData.class);
+                            if(userData.getIsuser().compareTo("true")==0)
+                                startActivity(new Intent(MainActivity.this, userdashboard.class));
+                            else
+                                startActivity(new Intent(MainActivity.this, Organizer.class));
+                        }
 
-        //password
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                        }
+                    });
+                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
 
-        if (userpassword.isEmpty()) {
+                }else{
+                    Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    counter--;
+                    info.setText("No of attempts remaining: " + counter);
 
-            error_password.setText("*field is empty");
-
-        } else {
-            error_password.setText("");
-        }
-
-
-        if (Patterns.EMAIL_ADDRESS.matcher(emailinput).matches() && !userpassword.isEmpty()) {
-
-            if (emailinput.equals("satish@gmail.com") && userpassword.equals("12345")) {
-
-
-                Intent intent = new Intent(MainActivity.this, Organizer.class);
-                startActivity(intent);
-                return;
-            } else if (emailinput.equals("sanath@gmail.com") && userpassword.equals("12345")) {
-
-                Intent intent1 = new Intent(MainActivity.this, userdashboard.class);
-                startActivity(intent1);
-                return;
-            } else {
-                error_password.setText("*user name or password is wrong");
-                error_username.setText("");
-
-                counter--;
-                info.setText("                        no of attemps left:" + counter);
+                    if(counter == 0){
+                        login.setEnabled(false);
+                    }
+                }
             }
+        });
 
 
-            if (counter == 0) {
-                login.setEnabled(false);
-            }
-        }
     }
   /*  public void openOrg(View view)
     {

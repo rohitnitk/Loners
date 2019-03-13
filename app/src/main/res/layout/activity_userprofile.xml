@@ -13,33 +13,42 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
-                android:background="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
                 android:orientation="vertical">
 
 
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="logout"
+                    android:clickable="true"
+                    app:srcCompat="@android:drawable/ic_menu_delete" />
 
                 <ImageView
-                    android:layout_marginTop="45dp"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/project"/>
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="45dp"
+                    android:src="@drawable/project" />
+
                 <EditText
                     android:id="@+id/name"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="M S DHONI"
-                    android:singleLine="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
                     android:editable="false"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
                     android:inputType="none"
-                    android:textSize="21sp"/>
+                    android:singleLine="true"
+                    android:text="M S DHONI"
+                    android:textColor="#fff"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
@@ -211,6 +220,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:text="Show all comments"/>
+
             </LinearLayout>
         </LinearLayout>
 

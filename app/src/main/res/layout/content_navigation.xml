@@ -14,6 +14,26 @@
 
 
         <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="93dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="delete"
+            android:background="@drawable/cerclebackgroundpurple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.831"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvacty"
+            app:layout_constraintVertical_bias="0.238"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+
+        <ImageView
             android:id="@+id/ivprfl"
             android:layout_width="130dp"
             android:layout_height="123dp"
@@ -26,12 +46,11 @@
             android:onClick="OrgProfile"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintHorizontal_bias="0.064"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.228"
+            app:layout_constraintVertical_bias="0.133"
             app:srcCompat="@drawable/profile1" />
-        " />
 
         <ImageView
             android:id="@+id/ivevnt"
@@ -46,15 +65,14 @@
             android:onClick="createEvent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.759"
+            app:layout_constraintHorizontal_bias="0.69"
             app:layout_constraintStart_toEndOf="@+id/ivprfl"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.174"
+            app:layout_constraintVertical_bias="0.065"
             app:srcCompat="@drawable/events1" />
 
         <ImageView
             android:id="@+id/ivacty"
-            android:onClick="activity"
             android:layout_width="130dp"
             android:layout_height="123dp"
             android:layout_marginStart="8dp"
@@ -63,6 +81,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="200dp"
+            android:onClick="activity"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.064"
@@ -143,7 +162,7 @@
             android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintHorizontal_bias="0.056"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivacty"
             app:layout_constraintVertical_bias="0.0" />
@@ -167,6 +186,67 @@
             app:layout_constraintStart_toEndOf="@+id/tvacty"
             app:layout_constraintTop_toBottomOf="@+id/ivcmnt"
             app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="93dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.122"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvacty"
+            app:layout_constraintVertical_bias="0.238"
+            app:srcCompat="@drawable/ic_phone_android_black_24dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="HOME"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.146"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="156dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:onClick="delete"
+            android:text="DELETE ACCOUNT"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.581"
+            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintTop_toTopOf="@+id/tvcmnt"
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="DELETE ACCOUNT" />
+
+
     </android.support.constraint.ConstraintLayout>
 
 </ScrollView>

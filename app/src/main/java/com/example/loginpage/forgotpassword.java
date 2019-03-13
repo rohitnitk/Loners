@@ -15,8 +15,6 @@ public class forgotpassword extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgotpassword);
-        btn = (Button) findViewById(R.id.etforgot);
         tet = (TextView) findViewById(R.id.editText4);
 
         btn.setOnClickListener(new View.OnClickListener() {
