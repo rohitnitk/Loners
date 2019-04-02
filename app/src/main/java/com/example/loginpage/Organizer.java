@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Organizer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public TextView profile,creevnt,activity,cmnts;
-    public ImageView prfl,cevnt,actvy,cmnt;
+    public ImageView prfl,cevnt,actvy;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
