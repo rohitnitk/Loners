@@ -24,7 +24,11 @@ public class add extends AppCompatActivity {
         super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_add);
 
+<<<<<<< HEAD
        mAuth = FirebaseAuth.getInstance();
+=======
+        mAuth = FirebaseAuth.getInstance();
+>>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
         currentUID = mAuth.getCurrentUser().getUid();
 
         amount=(EditText)findViewById(R.id.etmny);
@@ -32,14 +36,23 @@ public class add extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                amt = amount.getText().toString();
                if(validate(amount.getText().toString()))
                {
                    addMoney();
+=======
+                amt = amount.getText().toString();
+               if(validate(amount.getText().toString()))
+               {
+                   myRef = FirebaseDatabase.getInstance().getReference().child(currentUID);
+                   myRef.child("Balance").setValue(amt);
+>>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
                 Intent i=new Intent(add.this,card.class);
                 startActivity(i);
                }
     }
+<<<<<<< HEAD
 
         });
         }
@@ -49,6 +62,11 @@ public class add extends AppCompatActivity {
         myRef.child("BALANCE").setValue(amt);
     }
 
+=======
+            });
+        }
+
+>>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
         private boolean validate(String amount)
         {
             boolean r = false;

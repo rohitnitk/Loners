@@ -95,7 +95,11 @@ public class Events extends AppCompatActivity {
 
         public void setEventimage(Context ctx, String eventimage){
             ImageView EventImage = (ImageView) mView.findViewById(R.id.event_image);
+<<<<<<< HEAD
             Picasso.with(ctx).load(eventimage).into(EventImage);
+=======
+            Picasso.get().load(eventimage).into(EventImage);
+>>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
         }
 
         public void setTime(String time){

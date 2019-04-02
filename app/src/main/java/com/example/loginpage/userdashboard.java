@@ -67,4 +67,11 @@ public class userdashboard extends AppCompatActivity {
         startActivity(j);
 
     }
+<<<<<<< HEAD
+=======
+    public void SearchStart(View view)
+    {
+        startActivity(new Intent(this,search2.class ));
+    }
+>>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
 }

@@ -112,7 +112,7 @@ public class Home extends AppCompatActivity {
 
         public void setPostimage(Context ctx, String postimage){
             ImageView PostImage = (ImageView) mView.findViewById(R.id.post_image);
-            Picasso.with(ctx).load(postimage).into(PostImage);
+            Picasso.get().load(postimage).into(PostImage);
         }
 
         public void setTime(String time){
