@@ -32,8 +32,8 @@ public class Organizer extends AppCompatActivity
         setContentView(R.layout.content_navigation);
         prfl= (ImageView) findViewById(R.id.ivprfl);
         cevnt= (ImageView) findViewById(R.id.ivevnt);
-        actvy=(ImageView) findViewById(R.id.ivacty);
-        cmnt=(ImageView) findViewById(R.id.ivcmnt);
+      //  actvy=(ImageView) findViewById(R.id.);
+        //cmnt=(ImageView) findViewById(R.id.);
         profile=(TextView)findViewById(R.id.tvpfl);
         creevnt=(TextView)findViewById(R.id.tvent);
         activity=(TextView)findViewById(R.id.tvacty);
@@ -116,7 +116,7 @@ public class Organizer extends AppCompatActivity
 
 
     public void createEvent(View view) {
-        Intent intent= new Intent(Organizer.this,createEvent.class);
+        Intent intent= new Intent(Organizer.this,Events.class);
         startActivity(intent);
     }
 
@@ -128,9 +128,9 @@ public class Organizer extends AppCompatActivity
 
 
     public void activity(View view) {
-        Intent intent= new Intent(Organizer.this,personal.class);
-        startActivity(intent);
-    }
+       Intent intent= new Intent(Organizer.this,history.class);
+      startActivity(intent);
+  }
 
 
     public void OrgProfile(View view)

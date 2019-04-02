@@ -279,18 +279,52 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:onClick="ReceiveEvent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/moodtest"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/moodtest"
+                    android:padding="10dp"
+                  android:onClick="gotomoodTest"
+                    app:srcCompat="@drawable/ic_email_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Mood test"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgrey" />
+
+
+            </LinearLayout>
+
             <android.support.v7.widget.CardView
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:layout_width="160dp"
                 android:layout_height="190dp"
                 android:layout_margin="10dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
+                    android:gravity="center"
                     android:onClick="delete"
-                    android:gravity="center">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/btn7"
@@ -299,17 +333,19 @@
                         android:background="@drawable/cerclebackgroundpurple"
                         android:padding="10dp"
                         app:srcCompat="@android:drawable/ic_menu_delete" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
                         android:layout_marginTop="10dp"
-                        android:text="Delete account"/>
+                        android:text="Delete account"
+                        android:textStyle="bold" />
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/lightgrey"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:background="@color/lightgrey" />
 
 
                 </LinearLayout>

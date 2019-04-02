@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -59,11 +60,23 @@ public class Home extends AppCompatActivity {
                 {
                     @Override
                     protected void populateViewHolder(PostsViewHolder viewHolder, Posts model, int position) {
+                        final String PostKey = getRef(position).getKey();
+
                         viewHolder.setFullname(model.getFullname());
                         viewHolder.setDate(model.getDate());
                         viewHolder.setTime(model.getTime());
                         viewHolder.setDescription(model.getDescription());
                         viewHolder.setPostimage(getApplicationContext(), model.getPostimage());
+
+                        viewHolder.CommentPostButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent commentsIntent = new Intent(Home.this, CommentsActivity.class);
+                                commentsIntent.putExtra("PostKey", PostKey);
+                                startActivity(commentsIntent);
+                            }
+                        });
+
                     }
                 };
         postList.setAdapter(firebaseRecyclerAdapter);
@@ -73,9 +86,13 @@ public class Home extends AppCompatActivity {
 
         View mView;
 
+        ImageButton CommentPostButton;
+
         public PostsViewHolder(@NonNull View itemView) {
             super(itemView);
             mView = itemView;
+
+            CommentPostButton = (ImageButton) mView.findViewById(R.id.comment_button);
         }
 
         public void setDate(String date){

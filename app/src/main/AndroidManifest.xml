@@ -2,11 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.loginpage">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -21,8 +27,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home"></activity>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
+        <activity android:name=".EventActivity" />
+        <activity android:name=".Events" />
+        <activity android:name=".CommentsActivity" />
+        <activity android:name=".totalscore" />
+        <activity android:name=".moodtest" />
+        <activity android:name=".splash2" />
+        <activity android:name=".mood" />
+        <activity android:name=".Home" />
         <activity android:name=".PostActivity" />
+        <activity android:name=".payview" />
+        <activity android:name=".pay" />
+        <activity android:name=".history" />
+        <activity android:name=".pay1" />
+        <activity android:name=".fgtpin" />
+        <activity android:name=".card" />
+        <activity android:name=".crdview" />
+        <activity android:name=".crtpin" />
+        <activity android:name=".balance" />
+        <activity android:name=".add" />
+        <activity android:name=".paid" />
+        <activity android:name=".pincreate" />
+        <activity android:name=".changepin" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -73,10 +115,21 @@
         <activity
             android:name=".OrgProfile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".chatlogin" />
-        <activity android:name=".ShowData" />
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".ChatConversationActivity" />
+        <activity
+            android:name=".chatlogin"
+            android:label="chat"
+            android:theme="@style/chattheme" />
+        <activity
+            android:name=".ShowData"
+            android:label="chat"
+            android:theme="@style/chattheme" />
+        <activity
+            android:name=".ChatActivity"
+            android:label="chat"
+            android:theme="@style/chattheme" />
+        <activity
+            android:name=".ChatConversationActivity"
+            android:theme="@style/chattheme" />
         <activity android:name=".EnlargeImageView" />
     </application>
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    tools:context=".Events">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/main_page_toolbar"
+            layout="@layout/app_bar_layout">
+        </include>
+
+        <FrameLayout
+            android:id="@+id/main_container_event"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/all_user_event_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="57dp"/>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:clickable="true"
+            android:onClick="newEvent"
+            android:layout_alignStart="@+id/main_page_toolbar"
+            android:layout_alignLeft="@+id/main_page_toolbar"
+            android:layout_alignTop="@+id/main_page_toolbar"
+            android:layout_alignEnd="@+id/main_page_toolbar"
+            android:layout_alignRight="@+id/main_page_toolbar"
+            android:layout_alignBottom="@+id/main_page_toolbar"
+            android:layout_marginStart="334dp"
+            android:layout_marginLeft="334dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="8dp"
+            app:srcCompat="@drawable/ic_menu_send" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

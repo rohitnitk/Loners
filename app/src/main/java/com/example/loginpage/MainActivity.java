@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
     public FirebaseDatabase firebaseDatabase;
     String is_user;
 
+    static String LoggedIn_User_Email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
-        if(user!=null){
+        if (user != null) {
             finish();
             firebaseDatabase = FirebaseDatabase.getInstance();
             DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     UserData userData = dataSnapshot.getValue(UserData.class);
-                    if(userData.getIsuser().compareTo("true")==0)
+                    if (userData.getIsuser().compareTo("true") == 0)
                         startActivity(new Intent(MainActivity.this, userdashboard.class));
                     else
                         startActivity(new Intent(MainActivity.this, Organizer.class));
@@ -110,47 +112,78 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void validate(String userName, String userPassword) {
+    private void validate(final String userName, String userPassword) {
+
+        //
+
+        boolean a;
+        int b;
+
+        if (userName.isEmpty()) {
+            error_username.setText("*field is empty");
 
 
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(userName).matches()) {
+            error_username.setText("*please enter valid email address");
 
-        firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    firebaseDatabase = FirebaseDatabase.getInstance();
-                    DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
 
-                    databaseReference.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            UserData userData = dataSnapshot.getValue(UserData.class);
-                            if(userData.getIsuser().compareTo("true")==0)
-                                startActivity(new Intent(MainActivity.this, userdashboard.class));
-                            else
-                                startActivity(new Intent(MainActivity.this, Organizer.class));
+        } else {
+            error_username.setText("");
+        }
+
+        //password
+
+        if (userPassword.isEmpty()) {
+
+            error_password.setText("*field is empty");
+
+        } else {
+            error_password.setText("");
+        }
+
+
+        if (Patterns.EMAIL_ADDRESS.matcher(userName).matches() && !userPassword.isEmpty()) {
+
+            //satish
+            firebaseAuth.signInWithEmailAndPassword(userName, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        firebaseDatabase = FirebaseDatabase.getInstance();
+                        DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+
+                        databaseReference.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                UserData userData = dataSnapshot.getValue(UserData.class);
+                                if (userData.getIsuser().compareTo("true") == 0)
+                                    startActivity(new Intent(MainActivity.this, userdashboard.class));
+                                else
+                                    startActivity(new Intent(MainActivity.this, Organizer.class));
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                            }
+                        });
+                        Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+//
+
+
+                    } else {
+                        Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                        counter--;
+                        info.setText("No of attempts remaining: " + counter);
+
+                        if (counter == 0) {
+                            login.setVisibility(View.GONE);
                         }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-                        }
-                    });
-                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-
-                }else{
-                    Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
-                    counter--;
-                    info.setText("No of attempts remaining: " + counter);
-
-                    if(counter == 0){
-                        login.setEnabled(false);
                     }
                 }
-            }
-        });
+            });
 
 
-    }
+        }
   /*  public void openOrg(View view)
     {
         Intent i = new Intent(MainActivity.this, signup.class);
@@ -158,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
 
+    }
 }
 
 

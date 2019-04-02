@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".moodtest"
+    android:gravity="center"
+    android:orientation="vertical"
+
+    android:background="@drawable/pic2">
+
+
+
+
+    <TextView
+        android:id="@+id/questionTestview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="question?"
+        android:textColor="#E3F2FD"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionTestview"
+        android:layout_margin="40dp"
+        android:gravity="center"
+        android:textColor="#E3F2FD">
+
+        <RadioButton
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_below="@id/questionTestview"
+            android:buttonTint="@color/aqua"
+            android:text="option 1"
+            android:textColor="#E3F2FD"
+            android:onClick="submit"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_below="@id/questionTestview"
+            android:buttonTint="@color/aqua"
+            android:text="option 2"
+            android:textColor="#E3F2FD"
+            android:onClick="submit"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_below="@id/questionTestview"
+            android:buttonTint="@color/aqua"
+            android:text="option 3"
+            android:textColor="#E3F2FD"
+            android:onClick="submit"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/option4"
+            android:layout_width="260dp"
+            android:layout_height="84dp"
+            android:layout_below="@id/questionTestview"
+            android:buttonTint="@color/aqua"
+            android:text="option 4"
+            android:onClick="submit"
+            android:textColor="#E3F2FD"
+            android:textSize="20sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/sub1"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gold"
+        android:onClick="submit"
+        android:visibility="invisible"
+        android:text="SUBMIT" />
+
+    </LinearLayout>

@@ -197,5 +197,4 @@ public class PostActivity extends AppCompatActivity {
         }
     }
 
-
 }

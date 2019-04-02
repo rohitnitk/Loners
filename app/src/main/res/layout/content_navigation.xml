@@ -14,26 +14,6 @@
 
 
         <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="93dp"
-            android:layout_height="77dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:onClick="delete"
-            android:background="@drawable/cerclebackgroundpurple"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.831"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvacty"
-            app:layout_constraintVertical_bias="0.238"
-            app:srcCompat="@android:drawable/ic_menu_delete" />
-
-        <ImageView
             android:id="@+id/ivprfl"
             android:layout_width="130dp"
             android:layout_height="123dp"
@@ -68,50 +48,12 @@
             app:layout_constraintHorizontal_bias="0.69"
             app:layout_constraintStart_toEndOf="@+id/ivprfl"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.065"
+            app:layout_constraintVertical_bias="0.084"
             app:srcCompat="@drawable/events1" />
-
-        <ImageView
-            android:id="@+id/ivacty"
-            android:layout_width="130dp"
-            android:layout_height="123dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="200dp"
-            android:onClick="activity"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.064"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvpfl"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/activity1" />
-
-        <ImageView
-            android:id="@+id/ivcmnt"
-            android:layout_width="136dp"
-            android:onClick="messenger1"
-            android:layout_height="120dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="200dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.936"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvent"
-            app:layout_constraintVertical_bias="0.841"
-            app:srcCompat="@drawable/comment1" />
 
         <TextView
             android:id="@+id/tvpfl"
-            android:layout_width="96dp"
+            android:layout_width="wrap_content"
             android:layout_height="37dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -121,17 +63,17 @@
             android:layout_marginBottom="8dp"
             android:text="PROFILE"
             android:textColor="#000000"
-            android:textSize="22sp"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.153"
+            app:layout_constraintHorizontal_bias="0.123"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivprfl"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.005" />
 
         <TextView
             android:id="@+id/tvent"
-            android:layout_width="149dp"
+            android:layout_width="wrap_content"
             android:layout_height="37dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -139,13 +81,13 @@
             android:layout_marginBottom="8dp"
             android:text="CREATE EVENT"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.894"
+            app:layout_constraintHorizontal_bias="0.725"
             app:layout_constraintStart_toEndOf="@+id/tvpfl"
             app:layout_constraintTop_toBottomOf="@+id/ivevnt"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.010" />
 
         <TextView
             android:id="@+id/tvacty"
@@ -159,56 +101,35 @@
             android:layout_marginBottom="164dp"
             android:text="ACTIVITY"
             android:textColor="#000000"
-            android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.056"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivacty"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/tvcmnt"
-            android:layout_width="134dp"
-            android:layout_height="34dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="MESSENGER"
-            android:textColor="#000000"
-            android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.811"
-            app:layout_constraintStart_toEndOf="@+id/tvacty"
-            app:layout_constraintTop_toBottomOf="@+id/ivcmnt"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="93dp"
-            android:layout_height="77dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:onClick="home"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.122"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvacty"
-            app:layout_constraintVertical_bias="0.238"
-            app:srcCompat="@drawable/ic_phone_android_black_24dp" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+        <TextView
+            android:id="@+id/tvcmnt"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="56dp"
+            android:text="MESSENGER"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.624"
+            app:layout_constraintStart_toEndOf="@+id/tvacty"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13"
+            app:layout_constraintVertical_bias="0.109" />
 
         <TextView
             android:id="@+id/textView12"
-            android:layout_width="75dp"
+            android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -217,34 +138,101 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:text="HOME"
-            android:textSize="23dp"
-            android:textStyle="bold"
+            android:textColor="@color/colorblack"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.146"
+            app:layout_constraintHorizontal_bias="0.143"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
 
         <TextView
             android:id="@+id/editText3"
-            android:layout_width="156dp"
+            android:layout_width="165dp"
             android:layout_height="30dp"
             android:layout_marginStart="70dp"
             android:layout_marginLeft="70dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="196dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:onClick="delete"
             android:text="DELETE ACCOUNT"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorblack"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.581"
+            app:layout_constraintHorizontal_bias="0.746"
             app:layout_constraintStart_toEndOf="@+id/textView12"
             app:layout_constraintTop_toTopOf="@+id/tvcmnt"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.0"
             tools:text="DELETE ACCOUNT" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="108dp"
+            android:layout_height="111dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.628"
+            app:layout_constraintStart_toEndOf="@+id/imageView12"
+            app:layout_constraintTop_toBottomOf="@+id/tvcmnt"
+            app:layout_constraintVertical_bias="0.493"
+            app:srcCompat="@drawable/delete2" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="123dp"
+            android:layout_height="116dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvacty"
+            app:layout_constraintVertical_bias="0.385"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="122dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.584"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/tvent"
+            app:srcCompat="@drawable/chat2" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="118dp"
+            android:layout_height="117dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.104"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvpfl"
+            app:srcCompat="@drawable/history2" />
 
 
     </android.support.constraint.ConstraintLayout>

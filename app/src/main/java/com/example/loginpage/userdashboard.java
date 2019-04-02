@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,7 +24,7 @@ public class userdashboard extends AppCompatActivity {
     }
 
     public void activity_page(View view) {
-        startActivity(new Intent(this, personal.class));
+        startActivity(new Intent(this, history.class));
     }
 
 
@@ -36,7 +34,7 @@ public class userdashboard extends AppCompatActivity {
 
     public void createEvent(View v)
     {
-        Intent i = new Intent(this,createEvent.class);
+        Intent i = new Intent(this,Events.class);
         startActivity(i);
     }
 
@@ -61,6 +59,12 @@ public class userdashboard extends AppCompatActivity {
                         }
                     }
                 });
+
+    }
+
+    public void gotomoodTest(View view) {
+        Intent j = new Intent(this, mood.class);
+        startActivity(j);
 
     }
 }
