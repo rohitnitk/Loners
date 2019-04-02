@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mainBackground"
-    tools:context=".Home">
+    tools:context=".Events">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,12 +17,12 @@
         </include>
 
         <FrameLayout
-            android:id="@+id/main_container"
+            android:id="@+id/main_container_event"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/all_user_post_list"
+                android:id="@+id/all_user_event_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="57dp"/>
@@ -33,7 +33,7 @@
             android:layout_width="52dp"
             android:layout_height="52dp"
             android:clickable="true"
-            android:onClick="newPost"
+            android:onClick="newEvent"
             android:layout_alignStart="@+id/main_page_toolbar"
             android:layout_alignLeft="@+id/main_page_toolbar"
             android:layout_alignTop="@+id/main_page_toolbar"

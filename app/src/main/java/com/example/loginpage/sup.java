@@ -208,6 +208,7 @@ public class sup extends AppCompatActivity {
         ref1.child("Name").setValue(user_fname);
         ref1.child("Image_Url").setValue("Null");
         ref1.child("Email").setValue(user_email);
+        //ref1.child("ampout").setValue("satish");
 
         //
 

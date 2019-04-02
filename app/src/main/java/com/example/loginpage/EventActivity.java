@@ -31,7 +31,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class PostActivity extends AppCompatActivity {
+public class EventActivity extends AppCompatActivity {
 
     private ProgressDialog loadingBar;
 
@@ -52,18 +52,18 @@ public class PostActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_post);
+        setContentView(R.layout.activity_event);
 
         mAuth = FirebaseAuth.getInstance();
         currentUID = mAuth.getCurrentUser().getUid();
 
         postImageReference = FirebaseStorage.getInstance().getReference();
         usersRef = FirebaseDatabase.getInstance().getReference();
-        postRef = FirebaseDatabase.getInstance().getReference().child("Posts");
+        postRef = FirebaseDatabase.getInstance().getReference().child("Events");
 
-        selectPostImage = (ImageButton) findViewById(R.id.selectPostImage);
-        postDescription = (EditText) findViewById(R.id.postDescription);
-        updatePostButton = (Button) findViewById(R.id.updatePostButton);
+        selectPostImage = (ImageButton) findViewById(R.id.selectEventImage);
+        postDescription = (EditText) findViewById(R.id.eventDescription);
+        updatePostButton = (Button) findViewById(R.id.updateEventButton);
         loadingBar = new ProgressDialog(this);
 
         selectPostImage.setOnClickListener(new View.OnClickListener() {
@@ -76,13 +76,13 @@ public class PostActivity extends AppCompatActivity {
         updatePostButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validatePostInfo();
+                validateEventInfo();
             }
         });
 
     }
 
-    private void validatePostInfo() {
+    private void validateEventInfo() {
         description = postDescription.getText().toString();
 
         if(imageUri == null){
@@ -92,8 +92,8 @@ public class PostActivity extends AppCompatActivity {
             Toast.makeText(this, "Please write something in description...", Toast.LENGTH_SHORT).show();
         }
         else{
-            loadingBar.setTitle("Add New Post");
-            loadingBar.setMessage("Please wait, while we are uploading your new post...");
+            loadingBar.setTitle("Add New Event");
+            loadingBar.setMessage("Please wait, while we are uploading your new event...");
             loadingBar.show();
             loadingBar.setCanceledOnTouchOutside(true);
 
@@ -112,7 +112,7 @@ public class PostActivity extends AppCompatActivity {
 
         postRandomName = saveCurrentDate + saveCurrentTime;
 
-        final StorageReference filePath = postImageReference.child("Post Images").child(imageUri.getLastPathSegment() + postRandomName + ".jpg");
+        final StorageReference filePath = postImageReference.child("Event Images").child(imageUri.getLastPathSegment() + postRandomName + ".jpg");
 
         filePath.putFile(imageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
             @Override
@@ -127,14 +127,14 @@ public class PostActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Uri> task) {
                 if(task.isSuccessful()){
                     Uri downUri = task.getResult();
-                    Toast.makeText(PostActivity.this, "Profile Image stored successfully to Firebase storage...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EventActivity.this, "Event Image stored successfully to Firebase storage...", Toast.LENGTH_SHORT).show();
 
                     downloadUrl = downUri.toString();
                     savingPost();
                 }
                 else{
                     String message = task.getException().getMessage();
-                    Toast.makeText(PostActivity.this, "Error occured: " + message, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EventActivity.this, "Error occured: " + message, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -152,7 +152,7 @@ public class PostActivity extends AppCompatActivity {
                     postsMap.put("date", saveCurrentDate);
                     postsMap.put("time", saveCurrentTime);
                     postsMap.put("description", description);
-                    postsMap.put("postimage", downloadUrl);
+                    postsMap.put("eventimage", downloadUrl);
                     postsMap.put("fullname", userName);
 
                     postRef.child(currentUID + postRandomName).updateChildren(postsMap)
@@ -160,12 +160,12 @@ public class PostActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task task) {
                                     if(task.isSuccessful()){
-                                        Toast.makeText(PostActivity.this, "New post is updated succesfully", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(EventActivity.this, "New event is updated succesfully", Toast.LENGTH_SHORT).show();
                                         loadingBar.dismiss();
                                         finish();
                                     }
                                     else{
-                                        Toast.makeText(PostActivity.this, "Error occurred while updating your post", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(EventActivity.this, "Error occurred while updating your event", Toast.LENGTH_SHORT).show();
                                         loadingBar.dismiss();
                                     }
                                 }
@@ -196,5 +196,4 @@ public class PostActivity extends AppCompatActivity {
             selectPostImage.setImageURI(imageUri);
         }
     }
-
 }

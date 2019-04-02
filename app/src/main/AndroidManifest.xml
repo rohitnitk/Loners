@@ -21,8 +21,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home"></activity>
+        <activity android:name=".EventActivity"></activity>
+        <activity android:name=".Events" />
+        <activity android:name=".CommentsActivity" />
+        <activity android:name=".totalscore" />
+        <activity android:name=".moodtest" />
+        <activity android:name=".splash2" />
+        <activity android:name=".mood" />
+        <activity android:name=".Home" />
         <activity android:name=".PostActivity" />
+        <activity android:name=".payview" />
+        <activity android:name=".pay" />
+        <activity android:name=".history" />
+        <activity android:name=".pay1" />
+        <activity android:name=".fgtpin" />
+        <activity android:name=".card" />
+        <activity android:name=".crdview" />
+        <activity android:name=".crtpin" />
+        <activity android:name=".balance" />
+        <activity android:name=".add" />
+        <activity android:name=".paid" />
+        <activity android:name=".pincreate" />
+        <activity android:name=".changepin" />
+        <activity android:name=".Search"/>
+
+
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -73,10 +96,21 @@
         <activity
             android:name=".OrgProfile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".chatlogin" />
-        <activity android:name=".ShowData" />
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".ChatConversationActivity" />
+        <activity
+            android:name=".chatlogin"
+            android:label="chat"
+            android:theme="@style/chattheme" />
+        <activity
+            android:name=".ShowData"
+            android:label="chat"
+            android:theme="@style/chattheme" />
+        <activity
+            android:name=".ChatActivity"
+            android:label="chat"
+            android:theme="@style/chattheme" />
+        <activity
+            android:name=".ChatConversationActivity"
+            android:theme="@style/chattheme" />
         <activity android:name=".EnlargeImageView" />
     </application>
 

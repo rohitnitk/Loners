@@ -116,7 +116,7 @@ public class Organizer extends AppCompatActivity
 
 
     public void createEvent(View view) {
-        Intent intent= new Intent(Organizer.this,createEvent.class);
+        Intent intent= new Intent(Organizer.this,Events.class);
         startActivity(intent);
     }
 

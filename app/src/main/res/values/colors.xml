@@ -16,4 +16,23 @@
     <color name="testcolorblue">#152b38</color>
     <color name="pink">#fe104d</color>
     <color name="black_overlay">#66000000</color>
+    <color name="aqua">#E3F2FD</color>
+    <color name="gold">#ffbf00</color>
+    <color name="mainBackground">#D7D7D7</color>
+    <color name="colorblue">#1E89DD</color>
+    <color name="colorblack">#000000</color>
+    <color name="colorsky">#98EDF8</color>
+    <color name="colormaroon">#DA5D87</color>
+    <color name="colorhdfc">#EE685D</color>
+    <color name="coloricic">#E28D0F</color>
+    <color name="colorcanara">#8B93E7</color>
+    <color name="colortop">#F8E54E</color>
+    <color name="colorbg">#F0F8A7</color>
+    <color name="colorcd">#D5D1D1</color>
+
+    //
+    <color name="colorchat">#070709</color>
+    <color name="colorsent">#DAF7C6</color>
+    <color name="WHITE">#FFFFFF</color>
+    //
 </resources>
