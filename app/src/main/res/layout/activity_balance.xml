@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     android:background="@color/colorsky"
     tools:context=".balance">
 
@@ -24,8 +23,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-=======
-    tools:context=".balance">
-
->>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
 </android.support.constraint.ConstraintLayout>

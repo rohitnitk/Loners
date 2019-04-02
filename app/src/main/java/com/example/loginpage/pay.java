@@ -21,11 +21,7 @@ public class pay extends AppCompatActivity {
     private EditText a1,a2,a3,a4;
     private Button bt;
     private FirebaseAuth mAuth;
-<<<<<<< HEAD
     private String currentUID, d1, d2, d3, d4;
-=======
-    private String currentUID, c1, c2, c3, c4;
->>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
     private DatabaseReference myRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,17 +37,10 @@ public class pay extends AppCompatActivity {
         a4=(EditText)findViewById(R.id.etp4);
         bt=(Button)findViewById(R.id.btk4);
 
-<<<<<<< HEAD
         compare();
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-=======
-        bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                compare();
->>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
                 if(validate())
                 {
                     Intent i=new Intent(pay.this,pay1.class);
@@ -68,17 +57,10 @@ public class pay extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 PIN pin = dataSnapshot.getValue(PIN.class);
-<<<<<<< HEAD
                 d1 = pin.getP1();
                 d2 = pin.getP2();
                 d3 = pin.getP3();
                 d4 = pin.getP4();
-=======
-                c1 = pin.getP1();
-                c2 = pin.getP2();
-                c3 = pin.getP3();
-                c4 = pin.getP4();
->>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
             }
 
             @Override
@@ -98,16 +80,11 @@ public class pay extends AppCompatActivity {
 
      if(!(b1.isEmpty())&&!(b2.isEmpty())&&!(b3.isEmpty())&&!(b4.isEmpty()))
      {
-<<<<<<< HEAD
 
          if((b1.compareTo(d1)==0)&&(b2.compareTo(d2)==0)&&(b3.compareTo(d3)==0)&&(b4.compareTo(d4)==0))
          {
              r=true;
          }
-=======
-         if((b1.compareTo(c1)==0)&&(b2.compareTo(c2)==0)&&(b3.compareTo(c3)==0)&&(b4.compareTo(c4)==0))
-         {r=true;}
->>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
          else
          {
              Toast.makeText(pay.this, "Enter correct pin", Toast.LENGTH_SHORT).show();

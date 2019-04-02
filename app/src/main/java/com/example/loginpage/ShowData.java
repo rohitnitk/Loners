@@ -59,21 +59,13 @@ public class ShowData extends AppCompatActivity {
                 viewHolder.Image_Title(model.getImage_Title());
 
 
-<<<<<<< HEAD
                 //OnClick Item it will delete data from Database
-=======
-                //OnClick Item it will Delete data from Database
->>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
                 viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(final View v) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(ShowData.this);
-<<<<<<< HEAD
                         builder.setMessage("Do you want to delete this data ?").setCancelable(false)
-=======
-                        builder.setMessage("Do you want to Delete this data ?").setCancelable(false)
->>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
                                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {

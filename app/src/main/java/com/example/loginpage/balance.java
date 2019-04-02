@@ -1,7 +1,6 @@
 package com.example.loginpage;
 
 import android.os.Bundle;
-<<<<<<< HEAD
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -22,17 +21,10 @@ public class balance extends AppCompatActivity {
     private String g;
     private DatabaseReference myRef1;
    // private String bal;
-=======
-import android.support.v7.app.AppCompatActivity;
-
-public class balance extends AppCompatActivity {
-
->>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_balance);
-<<<<<<< HEAD
         mAuth = FirebaseAuth.getInstance();
         currentUID = mAuth.getCurrentUser().getUid();
         info = (TextView) findViewById(R.id.tvinfo1);
@@ -53,7 +45,4 @@ public class balance extends AppCompatActivity {
     }
 
 
-=======
-    }
->>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
 }

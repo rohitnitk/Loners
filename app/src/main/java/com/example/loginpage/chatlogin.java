@@ -114,11 +114,7 @@ public class chatlogin extends AppCompatActivity
 
 
     public void payment(View view) {
-<<<<<<< HEAD
         Intent j = new Intent(this,payview.class);
-=======
-        Intent j = new Intent(this, payview.class);
->>>>>>> 5bb075d42880bddc8cfac6f7bf6c7a00eebd06f5
         startActivity(j);
 
     }

@@ -92,7 +92,7 @@
         <TextView
             android:id="@+id/tvacty"
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_height="29dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
@@ -104,9 +104,10 @@
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.122"
+            app:layout_constraintHorizontal_bias="0.125"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView15"
+            app:layout_constraintVertical_bias="0.26" />
 
         <TextView
             android:id="@+id/tvcmnt"
@@ -178,12 +179,13 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
+            android:onClick="delete"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.628"
+            app:layout_constraintHorizontal_bias="0.681"
             app:layout_constraintStart_toEndOf="@+id/imageView12"
             app:layout_constraintTop_toBottomOf="@+id/tvcmnt"
-            app:layout_constraintVertical_bias="0.493"
+            app:layout_constraintVertical_bias="0.461"
             app:srcCompat="@drawable/delete2" />
 
         <ImageView
@@ -196,12 +198,13 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
+            android:onClick="home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvacty"
-            app:layout_constraintVertical_bias="0.385"
+            app:layout_constraintVertical_bias="0.512"
             app:srcCompat="@drawable/home" />
 
         <ImageView
@@ -210,28 +213,28 @@
             android:layout_height="118dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginTop="40dp"
+            android:onClick="messenger1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.584"
-            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintHorizontal_bias="0.528"
+            app:layout_constraintStart_toEndOf="@+id/imageView15"
             app:layout_constraintTop_toBottomOf="@+id/tvent"
             app:srcCompat="@drawable/chat2" />
 
         <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="118dp"
-            android:layout_height="117dp"
+            android:id="@+id/imageView15"
+            android:layout_width="113dp"
+            android:layout_height="116dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="292dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:onClick="activity"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.104"
+            app:layout_constraintHorizontal_bias="0.065"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvpfl"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/history2" />
 
 

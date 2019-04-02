@@ -25,15 +25,15 @@ import com.google.firebase.auth.FirebaseUser;
 public class Organizer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public TextView profile,creevnt,activity,cmnts;
-    public ImageView prfl,cevnt,actvy;
+    public ImageView prfl,cevnt,actvy,cmnt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_navigation);
         prfl= (ImageView) findViewById(R.id.ivprfl);
         cevnt= (ImageView) findViewById(R.id.ivevnt);
-      //  actvy=(ImageView) findViewById(R.id.);
-        //cmnt=(ImageView) findViewById(R.id.);
+        //actvy=(ImageView) findViewById(R.id.ivacty);
+        //cmnt=(ImageView) findViewById(R.id.ivcmnt);
         profile=(TextView)findViewById(R.id.tvpfl);
         creevnt=(TextView)findViewById(R.id.tvent);
         activity=(TextView)findViewById(R.id.tvacty);
