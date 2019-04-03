@@ -65,7 +65,9 @@
         <activity android:name=".paid" />
         <activity android:name=".pincreate" />
         <activity android:name=".changepin" />
-
+        <activity android:name=".contactAndSupport"/>
+        <activity android:name=".Search"/>
+        <activity android:name=".RateApp"/>
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.provider"

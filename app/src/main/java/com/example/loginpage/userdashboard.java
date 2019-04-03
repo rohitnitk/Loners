@@ -89,4 +89,18 @@ public class userdashboard extends AppCompatActivity {
         }
 
     }
+
+    public void Searchbar(View view)
+    {
+        startActivity(new Intent(this, Search.class));
+    }
+    public void Contact_and_Support(View view)
+    {
+        startActivity(new Intent(this, contactAndSupport.class));
+    }
+
+    public void RateApp(View view)
+    {
+        startActivity(new Intent(this, RateApp.class));
+    }
 }
