@@ -196,4 +196,9 @@ public class EventActivity extends AppCompatActivity {
             selectPostImage.setImageURI(imageUri);
         }
     }
+
+    public void viewmap(View view) {
+        Intent i=new Intent(EventActivity.this,MapsActivity.class);
+        startActivity(i);
+    }
 }

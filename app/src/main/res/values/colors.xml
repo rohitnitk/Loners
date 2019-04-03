@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#A1111111</color>
     <color name="colorPrimaryDark">#1aa2e6</color>
-    <color name="color3">#fafafa</color>
+    <color name="color3">#FAFAFA</color>
     <color name="color2">#09c6df</color>
     <color name="color1">#0bcce6</color>
     <color name="colorAccent">#AC1717</color>
@@ -34,5 +34,10 @@
     <color name="colorchat">#070709</color>
     <color name="colorsent">#DAF7C6</color>
     <color name="WHITE">#FFFFFF</color>
+    <color name="signupColor">#066e8a</color>
+    <color name="white">#fafafa</color>
+    <color name="black">#070709</color>
+    <color name="red">#AC1717</color>
+    //
     //
 </resources>

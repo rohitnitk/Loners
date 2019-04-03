@@ -34,7 +34,7 @@
                     android:layout_height="150dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="45dp"
-                    android:src="@drawable/project" />
+                    android:src="@drawable/download" />
 
                 <EditText
                     android:id="@+id/name"
@@ -232,13 +232,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Follow Me"/>
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="edit"
-            android:onClick="edit"
-            />
 
     </LinearLayout>
 

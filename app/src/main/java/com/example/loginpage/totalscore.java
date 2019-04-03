@@ -1,6 +1,7 @@
 package com.example.loginpage;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -60,17 +61,36 @@ public class totalscore extends AppCompatActivity {
     }
 
 
+    public void chat(View view) {
+        finish();
+        Intent i = new Intent(getApplicationContext(),chatlogin.class);
 
+        startActivity(i);
+
+    }
 
     public void backbutton(View view) {
-        //finish();
-        Intent i = new Intent(getApplicationContext(), mood.class);
+        finish();
+        Intent i = new Intent(getApplicationContext(), mood2.class);
         startActivity(i);
     }
 
-    public void gotochat(View view) {
-        Intent i = new Intent(getApplicationContext(), chatlogin.class);
-        startActivity(i);
 
+
+
+    public void calltoDoctor(View view) {
+
+        //  String posted_by = "111-333-222-4";
+//        String posted_by = "990-231-332-4";
+//        String uri = "tel:" + posted_by.trim() ;
+//        Intent intent = new Intent(Intent.ACTION_CALL);
+//        intent.setData(Uri.parse(uri));
+//        startActivity(intent);
+        //Intent intent = new Intent(Intent.ACTION_DIAL);
+        //intent.setData(Uri.parse("tel:0123456789"));
+        //startActivity(intent);
+        String phone = "+9902313324";
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+        startActivity(intent);
     }
 }

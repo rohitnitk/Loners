@@ -1,6 +1,7 @@
 package com.example.loginpage;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -65,6 +66,27 @@ public class userdashboard extends AppCompatActivity {
     public void gotomoodTest(View view) {
         Intent j = new Intent(this, mood.class);
         startActivity(j);
+
+    }
+    private Boolean exit = false;
+    @Override
+
+
+    public void onBackPressed() {
+        if (exit) {
+            finish(); // finish activity
+        } else {
+            Toast.makeText(this, "Press Back again to Exit.",
+                    Toast.LENGTH_SHORT).show();
+            exit = true;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    exit = false;
+                }
+            }, 3 * 1000);
+
+        }
 
     }
 }

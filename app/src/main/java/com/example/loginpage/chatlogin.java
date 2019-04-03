@@ -35,7 +35,7 @@ public class chatlogin extends AppCompatActivity
         setContentView(R.layout.welcome);
 
 
-        signout = (Button)findViewById(R.id.signout);
+
         username = (TextView) findViewById(R.id.tvName);
 
         chat = (Button)findViewById(R.id.chat_button);
@@ -89,15 +89,6 @@ public class chatlogin extends AppCompatActivity
 
 
 
-
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth.signOut();
-                finish();
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            }
-        });
 
 
         chat.setOnClickListener(new View.OnClickListener() {
