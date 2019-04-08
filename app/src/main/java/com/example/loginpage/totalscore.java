@@ -80,15 +80,7 @@ public class totalscore extends AppCompatActivity {
 
     public void calltoDoctor(View view) {
 
-        //  String posted_by = "111-333-222-4";
-//        String posted_by = "990-231-332-4";
-//        String uri = "tel:" + posted_by.trim() ;
-//        Intent intent = new Intent(Intent.ACTION_CALL);
-//        intent.setData(Uri.parse(uri));
-//        startActivity(intent);
-        //Intent intent = new Intent(Intent.ACTION_DIAL);
-        //intent.setData(Uri.parse("tel:0123456789"));
-        //startActivity(intent);
+ 
         String phone = "+9902313324";
         Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
         startActivity(intent);
