@@ -19,27 +19,27 @@ You can also directly open the project in android studio by going to:<br />
 ## Snapshots
 <p align="center">
   <img />
- Login/SignUp Page
+ Login/SignUp Page 
 <img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-10-57-187_com.example.loginpage.png" align="center" width="400" height="700"> 
 <br />
 <br />
- User Dashboard
+ User Dashboard   
 <img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-11-25-128_com.example.loginpage.png" align="center" width="400" height="700">
 <br />
 <br />
-  User Dashboard
+ User Dashboard   
 <img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-11-31-975_com.example.loginpage.png" align="center" width="400" height="700">
 <br />
 <br />
- Search Bar
+ Search Bar         
 <img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-12-20-869_com.example.loginpage.png" align="center" width="400" height="700">
 <br />
 <br />
- Home
+ Home                
 <img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-12-36-056_com.example.loginpage.png" align="center" width="400" height="700">
 <br />
 <br />
- Events
+ Events             
  <img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-13-48-009_com.example.loginpage.png" align="center" width="400" height="700">
 
 <br />
