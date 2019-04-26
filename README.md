@@ -12,7 +12,7 @@ This app is the project done by Group-16 for year 2018-19 by six students of NIT
 ## User Guide
 You can download the source code from here: https://github.com/rohitnitk/Loners.git  
 Or you can clone or fork and then open the downlaoded project  in android studio.  
-You can also directly open the project in android studio by going to:
-**File-> New-> Project from Version control-> Git**
+You can also directly open the project in android studio by going to:__
+  **File-> New-> Project from Version control-> Git**__
   Then paste the above link to the pop-up window you get.
 
