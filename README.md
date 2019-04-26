@@ -32,8 +32,7 @@ You can also directly open the project in android studio by going to:<br />
 <br /><br />
 <img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-13-40-978_com.example.loginpage.png" align="center" width="400" height="700">
 <br /><br />
-<img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-13-48-009_com.example.loginpage.png
-" align="center" width="400" height="700">
+<img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-13-48-009_com.example.loginpage.png" align="center" width="400" height="700">
 
 
 
