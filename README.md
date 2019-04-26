@@ -15,4 +15,8 @@ Or you can clone or fork and then open the downlaoded project  in android studio
 You can also directly open the project in android studio by going to:<br />
   **File-> New-> Project from Version control-> Git**<br />
   Then paste the above link to the pop-up window you get.
+  
+## Snapshots
+![alt text](http://url/to/img.png)
+
 
