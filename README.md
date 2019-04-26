@@ -17,6 +17,9 @@ You can also directly open the project in android studio by going to:<br />
   Then paste the above link to the pop-up window you get.
   
 ## Snapshots
+<p align="center">
+  <img />
+
 <img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-10-57-187_com.example.loginpage.png" align="center" width="400">
 
-
+</p>
