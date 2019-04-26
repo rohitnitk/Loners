@@ -9,7 +9,7 @@ This app is the project done by Group-16 for year 2018-19 by six students of NIT
 6.Rohit Kumar
 
 ====================================================================
-## How To Use?
-You can download the source code from here: https://github.com/rohitnitk/Loners.git
-Or you can clone or fork and then open the downlaoded project  in android studio. You can also directly open the project
-in android studio by going to: ### file-> New-> Project from Version control-> Git
+## User Guide
+You can download the source code from here: https://github.com/rohitnitk/Loners.git  
+Or you can clone or fork and then open the downlaoded project  in android studio.   You can also directly open the project
+in android studio by going to:  file-> New-> Project from Version control-> Git
