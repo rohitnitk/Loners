@@ -20,6 +20,6 @@ You can also directly open the project in android studio by going to:<br />
 <p align="center">
   <img />
 
-<img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-10-57-187_com.example.loginpage.png" align="center" width="400" height="1000">
+<img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-10-57-187_com.example.loginpage.png" align="center" width="400" height="800">
 
 </p>
