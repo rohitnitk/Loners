@@ -1,6 +1,6 @@
 # Loners
 
-##NOTE: The App is in development mode, user can test the app on their own, by any means or in any case the the creators are'nt responsible for any damage caused to the device.
+
 All the changes are latest.
 This app is the project done by Group-16 for year 2018-19 by six students of NITK , CSE Department:  
 1.Satish   
@@ -49,5 +49,5 @@ You can also directly open the project in android studio by going to:<br />
 Contact and Support
 <img src="https://github.com/rohitnitk/Loner_Initial/blob/master/Image/Screenshot_2019-04-26-16-13-40-978_com.example.loginpage.png" align="center" width="400" height="700">
 
-
+## NOTE: The App is in development mode, user can test the app on their own, by any means or in any case the the creators are'nt responsible for any damage caused to the device.
 </p>
